@@ -1,0 +1,11 @@
+<div class="post-meta">
+    <ul>
+				{{#author}}
+            <li><i class="mdi-social-person"></i><a href="{{url}}">{{name}}</a></li>
+				{{/author}}
+        <li><i class="mdi-maps-local-offer"></i>{{tags separator=" | "}}</li>
+        <li><i class="mdi-editor-insert-invitation"></i>{{date published_at format="MMMM DD, YYYY"}}</li>
+        <li><i class="mdi-editor-mode-comment"></i> <a href="{{ url }}#disqus_thread">0</a></li>
+        <li><i class="mdi-action-bookmark"></i><span class="eta"></span></li>
+    </ul>
+</div>

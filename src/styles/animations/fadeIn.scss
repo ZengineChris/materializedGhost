@@ -1,0 +1,57 @@
+@-webkit-keyframes fadeIn {
+  from {
+    -webkit-transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  from {
+    -moz-transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    -moz-transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -moz-animation-name: fadeIn;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: cubic-bezier(.55,0,.1,1);
+  -moz-animation-duration: 0.5s;
+
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: cubic-bezier(.55,0,.1,1);
+  -webkit-animation-duration: 0.5s;
+
+  animation-name: fadeIn;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(.55,0,.1,1);
+  animation-duration: 0.5s;
+
+  opacity: 0; /* make things invisible upon start */
+
+  -webkit-animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+

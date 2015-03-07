@@ -1,0 +1,56 @@
+.sidebar{
+  padding-top: 20px;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  background: #ffffff;
+  @extend .z-depth-2;
+  margin-bottom: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-backface-visibility: hidden;
+  z-index: 99999;
+  float: left;
+  position: fixed;
+  width: 200px;
+}
+
+.blog-info{
+  > h1{
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 2rem;
+    line-height: 2.1rem;
+  }
+  > p{
+    margin: 5px;
+  }
+}
+
+.blog-logo{
+  > img {
+    margin: 0 auto 10px;
+    width: 200px;
+  }
+}
+
+.blog-nav{
+  padding-bottom: 20px;
+  > nav{
+    height: auto;
+    overflow: auto;
+    box-shadow: none;
+    line-height: 40px;
+    > ul{
+      > li{
+        float: none;
+        a{
+          display: block;
+          height: auto;
+          width: auto;
+        }
+      }
+    }
+  }
+}

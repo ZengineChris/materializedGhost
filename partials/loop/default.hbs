@@ -1,0 +1,14 @@
+<div class="row">
+		{{#foreach posts}}
+				{{> post/post-small }}
+		{{/foreach}}
+</div>
+<div class="row center">
+		{{#if pagination.prev}}
+				{{pagination}}
+		{{else}}
+				{{#if pagination.next}}
+						{{pagination}}
+				{{/if}}
+		{{/if}}
+</div>

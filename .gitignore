@@ -24,5 +24,12 @@ build/Release
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
 node_modules
 
+npm-debug.log
+
 # Users Environment Variables
 .lock-wscript
+
+.idea
+
+src/bower_components
+src/.tmp

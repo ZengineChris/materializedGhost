@@ -1,0 +1,19 @@
+<div class="blog-logo">
+    <img src="{{ @blog.logo }}" alt="blog logo">
+</div>
+<div class="blog-info center">
+    <h1><a class="grey-text text-darken-4" href="/" target="_self">{{ @blog.title }}</a></h1>
+    <p>{{ @blog.description }}</p>
+</div>
+<div class="blog-nav center">
+    <nav role="navigation">
+        <ul>
+						{{#foreach @blog.navigation}}
+                <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation">
+                    <a href="{{url absolute="true"}}">{{label}}</a>
+                </li>
+						{{/foreach}}
+        </ul>
+    </nav>
+</div>
+{{> social }}

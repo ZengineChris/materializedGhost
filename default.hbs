@@ -1,0 +1,79 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ meta_title }}</title>
+    <meta name="description" content="{{ meta_description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{meta_title}}">
+    <meta name="twitter:description" content="{{meta_description}}">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{meta_title}}">
+    <meta property="og:description" content="{{meta_description}}">
+		{{> custom/meta this}}
+    <link rel="apple-touch-icon" href="{{ asset "apple-touch-icon.png" }}">
+    <base href="/">
+    
+    <link rel="stylesheet" href="assets/styles/app-0a6bb987.css">
+    <!-- <script src="{{ asset "js/vendor/modernizr-2.8.3.min.js" }}"></script> -->
+    <script type="text/javascript">
+				{{> custom/config}}
+
+        function MG(config) {
+
+            this.gaUa = null;
+            this.disqusShortname = null;
+
+            var self = this;
+
+            if ( typeof config.gaUa !== undefined && config.gaUa !== 'UA-XXXXX-X' ) {
+                self.gaUa = config.gaUa;
+            }
+            else {
+                console.info('Google Analytics Key is not set or invalid!');
+            }
+
+            if ( typeof config.disqusShortname !== undefined && config.disqusShortname !== 'example' ) {
+                self.disqusShortname = config.disqusShortname;
+            }
+            else {
+                console.info('Disqus is not activated!');
+            }
+
+        }
+
+        MG.prototype.isAnalyticsActive = function () {
+            return this.gaUa !== null;
+        };
+
+        MG.prototype.isDisqusActive = function () {
+            return this.disqusShortname !== null;
+        };
+
+        MG.prototype.getGAKey = function () {
+            return this.gaUa;
+        };
+
+        MG.prototype.getDisqusShortname = function () {
+            return this.disqusShortname;
+        };
+
+        var mg = new MG(config);
+    </script>
+		{{ ghost_head }}
+</head>
+<body class="{{ body_class }}">
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+		your browser</a> to improve your experience.</p>
+<![endif]-->
+<section class="site-canvas">
+		{{{ body }}}
+</section>
+{{ghost_foot}}
+<script src="assets/scripts/lib-4eb3f47b.js"></script>
+<script src="assets/scripts/app-525e834f.js"></script>
+</body>
+</html>

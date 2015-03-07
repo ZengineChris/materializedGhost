@@ -1,0 +1,11 @@
+<ul class="pagination">
+		{{#if prev}}
+    <li class="waves-effect"><a href="{{page_url prev}}"><i class="mdi-navigation-chevron-left"></i></a></li>
+		{{/if}}
+    <li class="active">{{page}}</li>
+		<li><span>of</span></li>
+    <li>{{pages}}</li>
+		{{#if next}}
+    <li class="waves-effect"><a href="{{page_url next}}"><i class="mdi-navigation-chevron-right"></i></a></li>
+		{{/if}}
+</ul>

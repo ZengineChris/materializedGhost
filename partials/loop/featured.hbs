@@ -1,0 +1,23 @@
+<div class="row">
+		{{#foreach posts}}
+				{{#if featured}}
+						{{> post/post-medium }}
+				{{/if}}
+		{{/foreach}}
+</div>
+<div class="row">
+		{{#foreach posts}}
+				{{#unless featured}}
+						{{> post/post-small }}
+				{{/unless}}
+		{{/foreach}}
+</div>
+<div class="row center">
+		{{#if pagination.prev}}
+				{{pagination}}
+		{{else}}
+				{{#if pagination.next}}
+						{{pagination}}
+				{{/if}}
+		{{/if}}
+</div>

@@ -1,0 +1,37 @@
+.social-links{
+  > ul{
+    display: table;
+    margin: 0 auto;
+    list-style: none;
+    > li{
+      float: left;
+      margin-right: 10px;
+      > a{
+        text-decoration: none;
+        text-transform: none;
+        color: $primary_color;
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+footer .social-links{
+  > ul{
+    display: block;
+    margin-left: 0;
+    > li{
+      > a{
+        color: #ffffff;
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+.btn-twitter{
+  color: #ffffff;
+  &:hover{
+    color: #ffffff;
+  }
+}

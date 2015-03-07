@@ -1,0 +1,55 @@
+{{!< default }}
+{{> post/navbar }}
+{{#post}}
+    <div class="post-image blue-grey darken-1" style="background-image: url({{ image }});"></div>
+    <section class="container post-container fadeIn">
+        <article class="card">
+            <header class="card-content row">
+                <div class="col s12 m10">
+                    <h1>{{ title }}</h1>
+                    {{> post/meta }}
+                </div>
+                <div class="col s12 m2">
+                    <a href="https://twitter.com/share" target="_blank" class="waves-effect waves-light btn btn-twitter" data-via="exapmle" data-lang="de" data-dnt="true"><i class="fa fa-twitter"></i> Tweet</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                </div>
+            </header>
+            <div class="divider"></div>
+            <div class="row card-content">
+                <section class="col s12 m8 post-content">
+                    {{ content }}
+                </section>
+                <aside class="col s12 m4">
+                    <div class="hide-on-small-only">
+                        {{> components/sidebar }}
+                    </div>
+                </aside>
+            </div>
+            <div class="divider"></div>
+            <footer class="row card-content">
+                {{#author }}
+                    <div class="col s12 m3">
+                        <div class="circular-image">
+                            <img src="{{image}}" alt="author avatar">
+                        </div>
+                    </div>
+                    <div class="col s12 m9">
+                        <h4 class="center aligned">Written by {{ name }}</h4>
+                        <p class="center aligned">{{ bio }}</p>
+                    </div>
+                {{/author}}
+            </footer>
+            <div class="divider"></div>
+            <section class="post-comments row card-content">
+                <div class="col s12">
+                    {{> components/disqus }}
+                </div>
+            </section>
+        </article>
+
+    </section>
+{{/post}}
+
+{{> components/backToTop }}
+{{> components/back }}
+{{> footer }}
