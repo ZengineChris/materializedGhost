@@ -1,6 +1,8 @@
 # Materialized Ghost
  
  [Ghost](https://ghost.org/) A Ghost Theme based on Materialize Framework [Materialize Css Framework](http://materializecss.com/).
+ 
+ ![Cover](https://github.com/ZengineChris/materializedGhost/blob/master/cover.png)
 
 
 ## Table of contents
